@@ -46,6 +46,8 @@
 		var toInsert = ""
 		_.each(myApp.meds, function(val,index){
 			toInsert += "<p>"+val.medicationCodeableConcept.text+"</p>"
+			toInsert += "<p>-->"+val.dosage[0].text+"</p>"
+			
 		})
 		$("#main").html(toInsert)
 	}
